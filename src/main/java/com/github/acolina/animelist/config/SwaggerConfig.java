@@ -40,7 +40,7 @@ public class SwaggerConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .select().apis(RequestHandlerSelectors.basePackage("com.githud.acolina.animelist"))
+                .select().apis(RequestHandlerSelectors.basePackage("com.github.acolina.animelist"))
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build()
