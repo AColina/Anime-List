@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.web.client.RestTemplate;
 
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -24,6 +25,11 @@ import static java.time.format.DateTimeFormatter.ofPattern;
 public class App {
 
     public static final DateTimeFormatter FORMATTER = ofPattern("yyyy-MM-dd");
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 
     @Bean
     public ModelMapper modelMapper() {
